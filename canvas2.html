@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE>Graficos en JavaScript</TITLE>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<STYLE>
+  canvas {border:1px solid black;}
+</STYLE>
+</HEAD>
+<BODY>
+<H1>Graficos</H1>
+<canvas width="300" height="300" id="Mycanvas"></canvas>
+
+  <div id="opciones">
+      <h2>ELIGE UNA OPCIÓN</h2>
+
+    <a href="index.html">MENU</a>
+
+  </div>
+
+<script>
+var x,y;
+   var canvas=document.getElementById("Mycanvas");
+   var ctx = canvas.getContext("2d");
+   
+  for (var x=0; x<=300; x=x+10){
+  ctx.moveTo(x,0);
+  ctx.lineTo(x,300);
+}
+
+ for (var y=0; y<=300; y=y+10){
+  ctx.moveTo(0,y);
+  ctx.lineTo(300,y);
+}
+
+
+
+ ctx.strokeStyle = "#000000";
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(150,0);
+  ctx.lineTo(150,300);
+
+ctx.moveTo(0,150);
+  ctx.lineTo(300,150);
+
+ctx.strokeStyle = "#ff0000";
+ctx.stroke();
+
+</script>
+ 
+</BODY>
+</HTML>
